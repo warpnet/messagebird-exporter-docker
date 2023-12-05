@@ -40,7 +40,5 @@ jobs:
         with:
           push: true
           tags: ${{ steps.prep.outputs.tags }}
-          build-args: |
-            ARCH=${{ runner.arch }}
           platforms: |-
             linux/amd64

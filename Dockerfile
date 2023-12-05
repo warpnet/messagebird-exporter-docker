@@ -1,19 +1,11 @@
 FROM debian:latest as builder
 
 ARG VERSION=0.2.0
-ARG ARCH=amd64
 
 RUN apt update && \
     apt install -y curl && \
-    if [[ "$ARCH" == "ARM64" ]]; then \
-      OSARCH="arm64" \
-    elif [[ "ARCH" == "X64" ]]; then \
-      OSARCH="amd64" \ 
-    else \
-      OSARCH=$ARCH \
-    fi && \
     curl -sLo /tmp/messagebird_exporter.deb \
-    https://github.com/roaldnefs/messagebird_exporter/releases/download/v${VERSION}/messagebird_exporter_${VERSION}_linux_${OSARCH}.deb && \
+    https://github.com/roaldnefs/messagebird_exporter/releases/download/v${VERSION}/messagebird_exporter_${VERSION}_linux_amd64.deb && \
     apt install -y /tmp/messagebird_exporter.deb
 
 
