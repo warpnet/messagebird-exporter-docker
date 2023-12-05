@@ -12,5 +12,5 @@ docker run -e MESSAGEBIRD_API_TOKEN="API_TOKEN" warpnetbv/messagebird-exporter:l
 To specify a different listen address:
 
 ```bash
-docker run -e LISTEN_ADDRESS=":9106" -e MESSAGEBIRD_API_TOKEN="API_TOKEN" warpnetbv/messagebird-exporter:latest
+docker run -e LISTEN_ADDRESS=":9601" -e MESSAGEBIRD_API_TOKEN="API_TOKEN" warpnetbv/messagebird-exporter:latest
 ```
