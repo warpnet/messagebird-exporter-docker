@@ -6,11 +6,11 @@ This repository builds a Docker container based on Debian that holds
 Usage:
 
 ```bash
-docker run -e MESSAGEBIRD_API_TOKEN="API_TOKEN" warpnetbv/messagebird-exporter:latest
+docker run -e MESSAGEBIRD_API_KEY="API_TOKEN" warpnetbv/messagebird-exporter:latest
 ```
 
 To specify a different listen address:
 
 ```bash
-docker run -e LISTEN_ADDRESS=":9601" -e MESSAGEBIRD_API_TOKEN="API_TOKEN" warpnetbv/messagebird-exporter:latest
+docker run -e LISTEN_ADDRESS=":9601" -e MESSAGEBIRD_API_KEY="API_TOKEN" warpnetbv/messagebird-exporter:latest
 ```
